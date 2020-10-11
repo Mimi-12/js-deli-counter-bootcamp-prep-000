@@ -15,3 +15,21 @@ function nowServing(line){
   }
 
 }
+
+function currentLine(line){
+  if(line[0]){
+    let lineNames = "";
+    for(let i = 0; i < line.length; i++){
+      if(i === line.length -1){
+        lineNames += `${i+1}. ${line[i]}`
+      } else {
+        lineNames += `${i+1}. ${line[i]}, `
+      }
+
+    }
+    return `The line is currently: ${lineNames}`;
+  } else {
+    return "The line is currently empty."
+  }
+
+}
